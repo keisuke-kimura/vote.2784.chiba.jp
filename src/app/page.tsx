@@ -324,7 +324,7 @@ export default function Home() {
             </p>
           </div>
           <div className="space-y-8">
-            {candidates.map((candidate, index) => (
+            {candidates.map((candidate) => (
               <Link 
                 key={candidate.id} 
                 href={`/candidates/${candidate.id}`}
@@ -389,7 +389,7 @@ export default function Home() {
                             <h5 className="text-lg font-bold text-gray-900">重点政策</h5>
                           </div>
                           <div className="grid md:grid-cols-3 gap-4">
-                            {candidate.keyPolicies.map((policy, pIndex) => (
+                            {candidate.keyPolicies.map((policy) => (
                               <div key={policy.id} className="relative bg-white border border-gray-200 p-5 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                                 <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-blue-500 to-purple-500 rounded-l-xl" />
                                 <h6 className="font-bold text-gray-900 mb-3 text-base leading-tight">{policy.title}</h6>

@@ -1,6 +1,7 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
+import { use } from 'react';
 import { ArrowLeft, Calendar, MapPin, Award, Vote, Target, BookOpen, Twitter, Facebook, Instagram } from 'lucide-react';
 import { candidates, policyCategories } from '@/data/policies';
 import type { PolicyItem } from '@/types/policy';
@@ -12,9 +13,14 @@ interface PolicyByCategory {
   policies: PolicyItem[];
 }
 
-export default function CandidateDetailPage({ params }: { params: { id: string } }) {
+type PageProps = {
+  params: Promise<{ id: string }>;
+};
+
+export default function CandidateDetailPage({ params }: PageProps) {
   const router = useRouter();
-  const candidate = candidates.find(c => c.id === parseInt(params.id));
+  const resolvedParams = use(params);
+  const candidate = candidates.find(c => c.id === parseInt(resolvedParams.id));
 
   if (!candidate) {
     return (
