@@ -26,6 +26,28 @@ export const metadata: Metadata = {
     ],
   },
   manifest: '/site.webmanifest',
+  openGraph: {
+    title: '船橋市長選挙 2025 - 候補者政策比較プラットフォーム',
+    description: '候補者の政策をAIチャットで簡単に比較。投開票日6月22日。',
+    url: 'https://vote.2784.chiba.jp',
+    siteName: '船橋市長選挙 2025',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: '船橋市長選挙 2025 候補者政策比較プラットフォーム',
+      },
+    ],
+    locale: 'ja_JP',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: '船橋市長選挙 2025 - 候補者政策比較プラットフォーム',
+    description: '候補者の政策をAIチャットで簡単に比較。投開票日6月22日。',
+    images: ['/og-image.png'],
+  },
 };
 
 export const viewport = {

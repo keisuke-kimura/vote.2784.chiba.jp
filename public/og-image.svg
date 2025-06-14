@@ -1,0 +1,90 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#9333EA;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#EC4899;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9333EA;stop-opacity:1" />
+    </linearGradient>
+    <pattern id="gridPattern" width="60" height="60" patternUnits="userSpaceOnUse">
+      <rect width="60" height="60" fill="none" stroke="white" stroke-width="0.5" opacity="0.1"/>
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="white"/>
+  
+  <!-- Gradient overlay -->
+  <rect width="1200" height="630" fill="url(#bgGradient)" opacity="0.1"/>
+  
+  <!-- Grid pattern -->
+  <rect width="1200" height="630" fill="url(#gridPattern)"/>
+  
+  <!-- Top decorative element -->
+  <circle cx="100" cy="100" r="150" fill="url(#bgGradient)" opacity="0.2"/>
+  <circle cx="1100" cy="530" r="200" fill="url(#bgGradient)" opacity="0.2"/>
+  
+  <!-- Main content container -->
+  <rect x="100" y="140" width="1000" height="350" rx="20" fill="white" filter="drop-shadow(0 10px 40px rgba(0,0,0,0.1))"/>
+  
+  <!-- Vote icon -->
+  <g transform="translate(150, 180)">
+    <rect x="0" y="20" width="80" height="60" rx="8" fill="url(#bgGradient)"/>
+    <rect x="20" y="10" width="40" height="20" rx="4" fill="url(#bgGradient)"/>
+    <path d="M 15 45 L 30 60 L 65 25" stroke="white" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  
+  <!-- Title -->
+  <text x="280" y="220" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#1F2937">
+    船橋市長選挙 2025
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="280" y="270" font-family="Arial, sans-serif" font-size="32" fill="#4B5563">
+    候補者政策比較プラットフォーム
+  </text>
+  
+  <!-- Features -->
+  <g transform="translate(280, 320)">
+    <!-- Feature 1 -->
+    <rect x="0" y="0" width="200" height="100" rx="12" fill="#EBF8FF" stroke="#3B82F6" stroke-width="2"/>
+    <text x="100" y="40" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#3B82F6" text-anchor="middle">
+      AIチャット
+    </text>
+    <text x="100" y="65" font-family="Arial, sans-serif" font-size="16" fill="#64748B" text-anchor="middle">
+      政策を質問
+    </text>
+    
+    <!-- Feature 2 -->
+    <rect x="220" y="0" width="200" height="100" rx="12" fill="#F3E8FF" stroke="#9333EA" stroke-width="2"/>
+    <text x="320" y="40" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#9333EA" text-anchor="middle">
+      政策比較
+    </text>
+    <text x="320" y="65" font-family="Arial, sans-serif" font-size="16" fill="#64748B" text-anchor="middle">
+      一覧で確認
+    </text>
+    
+    <!-- Feature 3 -->
+    <rect x="440" y="0" width="200" height="100" rx="12" fill="#FEE2E2" stroke="#EC4899" stroke-width="2"/>
+    <text x="540" y="40" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#EC4899" text-anchor="middle">
+      期日前投票
+    </text>
+    <text x="540" y="65" font-family="Arial, sans-serif" font-size="16" fill="#64748B" text-anchor="middle">
+      投票所案内
+    </text>
+  </g>
+  
+  <!-- Voting date -->
+  <rect x="450" y="520" width="300" height="60" rx="30" fill="url(#bgGradient)"/>
+  <text x="600" y="558" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white" text-anchor="middle">
+    投開票日 6月22日
+  </text>
+  
+  <!-- URL -->
+  <text x="600" y="600" font-family="Arial, sans-serif" font-size="18" fill="#64748B" text-anchor="middle">
+    vote.2784.chiba.jp
+  </text>
+</svg>
