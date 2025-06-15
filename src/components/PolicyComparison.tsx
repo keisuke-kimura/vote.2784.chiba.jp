@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { Search, Users, ChevronDown, X, Vote } from 'lucide-react';
+import { Search, Users, ChevronDown, X, Vote, Filter } from 'lucide-react';
 import type { ComparisonFilter } from '@/types/policy';
 import { policyCategories, candidates } from '@/data/policies';
 
@@ -17,6 +17,7 @@ export default function PolicyComparison({ onClose }: PolicyComparisonProps) {
     searchQuery: ''
   });
   const [expandedCategories, setExpandedCategories] = useState<string[]>(policyCategories.map(cat => cat.id));
+  const [showFilters, setShowFilters] = useState(false);
 
   const filteredComparisons = useMemo(() => {
     let categoriesToShow = policyCategories;
@@ -83,47 +84,59 @@ export default function PolicyComparison({ onClose }: PolicyComparisonProps) {
   return (
     <div className="h-full flex flex-col bg-white">
       {/* Header */}
-      <div className="bg-white border-b border-gray-100 p-4 sm:p-6">
-        <div className="flex items-center justify-between mb-4">
-          <div className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
-              <Vote className="w-6 h-6 text-white" />
+      <div className="bg-white border-b border-gray-100">
+        {/* Title Bar */}
+        <div className="p-3 sm:p-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2 sm:gap-3">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg sm:rounded-xl flex items-center justify-center shadow-lg">
+                <Vote className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+              </div>
+              <div>
+                <h2 className="text-xl sm:text-2xl font-bold text-gray-900">政策比較ツール</h2>
+                <p className="text-xs sm:text-sm text-gray-700 font-medium mt-0 sm:mt-0.5 hidden sm:block">候補者の政策を分野別に比較できます</p>
+              </div>
             </div>
-            <div>
-              <h2 className="text-2xl font-bold text-gray-900">政策比較ツール</h2>
-              <p className="text-sm text-gray-700 font-medium mt-0.5">候補者の政策を分野別に比較できます</p>
+            <div className="flex items-center gap-2">
+              {/* Mobile Filter Toggle */}
+              <button
+                onClick={() => setShowFilters(!showFilters)}
+                className="sm:hidden group p-2 hover:bg-gray-100 rounded-lg transition-colors cursor-pointer border border-gray-200"
+              >
+                <Filter className="w-5 h-5 text-gray-600 group-hover:text-gray-800" />
+              </button>
+              {onClose && (
+                <button
+                  onClick={onClose}
+                  className="group p-2 sm:p-3 hover:bg-gray-100 rounded-lg transition-colors cursor-pointer"
+                >
+                  <X className="w-5 h-5 sm:w-6 sm:h-6 text-gray-500 group-hover:text-gray-700" />
+                </button>
+              )}
             </div>
           </div>
-          {onClose && (
-            <button
-              onClick={onClose}
-              className="group p-3 hover:bg-gray-100 rounded-lg transition-colors cursor-pointer"
-            >
-              <X className="w-6 h-6 text-gray-500 group-hover:text-gray-700" />
-            </button>
-          )}
         </div>
 
-        {/* Filters */}
-        <div className="space-y-3">
-          {/* Search */}
-          <div className="w-full">
-            <div className="relative">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
-              <input
-                type="text"
-                placeholder="キーワードで政策を検索..."
-                className="w-full pl-11 pr-4 py-3 text-sm bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent focus:bg-white transition-all"
-                value={filter.searchQuery}
-                onChange={(e) => setFilter({ ...filter, searchQuery: e.target.value })}
-              />
-            </div>
+        {/* Search Bar - Always Visible */}
+        <div className="px-3 pb-3 sm:px-4 sm:pb-4">
+          <div className="relative">
+            <Search className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 w-4 h-4 sm:w-5 sm:h-5 text-gray-400" />
+            <input
+              type="text"
+              placeholder="キーワードで検索..."
+              className="w-full pl-9 sm:pl-11 pr-3 sm:pr-4 py-2 sm:py-3 text-xs sm:text-sm bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent focus:bg-white transition-all"
+              value={filter.searchQuery}
+              onChange={(e) => setFilter({ ...filter, searchQuery: e.target.value })}
+            />
           </div>
+        </div>
 
-          <div className="flex flex-col sm:flex-row gap-3">
+        {/* Filters - Collapsible on Mobile */}
+        <div className={`${showFilters || 'hidden sm:block'} px-3 pb-3 sm:px-4 sm:pb-4 space-y-2 sm:space-y-3 bg-gray-50 sm:bg-white border-t sm:border-0 border-gray-100`}>
+          <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
             {/* Category Filter */}
             <select
-              className="flex-1 px-4 py-3 text-sm bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent focus:bg-white transition-all font-medium"
+              className="flex-1 px-3 sm:px-4 py-2 sm:py-3 text-xs sm:text-sm bg-white sm:bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all font-medium"
               value={filter.categories[0] || ''}
               onChange={(e) => setFilter({ ...filter, categories: e.target.value ? [e.target.value] : [] })}
             >
@@ -135,7 +148,7 @@ export default function PolicyComparison({ onClose }: PolicyComparisonProps) {
 
             {/* Priority Filter */}
             <select
-              className="flex-1 px-4 py-3 text-sm bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent focus:bg-white transition-all font-medium"
+              className="flex-1 px-3 sm:px-4 py-2 sm:py-3 text-xs sm:text-sm bg-white sm:bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all font-medium"
               value={filter.priorities[0] || ''}
               onChange={(e) => setFilter({ ...filter, priorities: e.target.value ? [e.target.value as 'high' | 'medium' | 'low'] : [] })}
             >
@@ -147,14 +160,14 @@ export default function PolicyComparison({ onClose }: PolicyComparisonProps) {
           </div>
 
           {/* Candidate Filter */}
-          <div className="bg-gray-50 px-4 py-3 rounded-lg">
-            <div className="flex items-center gap-3 mb-2">
-              <Users className="w-5 h-5 text-gray-600" />
-              <span className="text-sm font-semibold text-gray-800">表示する候補者:</span>
+          <div className="bg-white sm:bg-gray-50 px-3 sm:px-4 py-2 sm:py-3 rounded-lg border sm:border-0 border-gray-200">
+            <div className="flex items-center gap-2 sm:gap-3 mb-1.5 sm:mb-2">
+              <Users className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600" />
+              <span className="text-xs sm:text-sm font-semibold text-gray-800">表示する候補者:</span>
             </div>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-1 sm:gap-2">
               {candidates.map(candidate => (
-                <label key={candidate.id} className="flex items-center gap-2 cursor-pointer hover:bg-white px-2 py-1.5 rounded-lg transition-colors">
+                <label key={candidate.id} className="flex items-center gap-1.5 sm:gap-2 cursor-pointer hover:bg-gray-50 sm:hover:bg-white px-1.5 sm:px-2 py-1 sm:py-1.5 rounded-md sm:rounded-lg transition-colors">
                   <input
                     type="checkbox"
                     checked={selectedCandidates.includes(candidate.id)}
@@ -165,9 +178,9 @@ export default function PolicyComparison({ onClose }: PolicyComparisonProps) {
                         setSelectedCandidates(selectedCandidates.filter(id => id !== candidate.id));
                       }
                     }}
-                    className="w-4 h-4 rounded text-blue-600 focus:ring-blue-500 focus:ring-offset-0"
+                    className="w-3.5 h-3.5 sm:w-4 sm:h-4 rounded text-blue-600 focus:ring-blue-500 focus:ring-offset-0"
                   />
-                  <span className="text-xs sm:text-sm text-gray-800 font-medium">{candidate.name}</span>
+                  <span className="text-[11px] sm:text-xs md:text-sm text-gray-800 font-medium">{candidate.name}</span>
                 </label>
               ))}
             </div>

@@ -226,38 +226,36 @@ export default function Home() {
       </section>
 
       {/* Public Debate Section */}
-      <section id="debate" className="py-24 bg-gradient-to-b from-gray-50 to-white">
+      <section id="debate" className="py-12 sm:py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">
+          <div className="text-center mb-8 sm:mb-12">
+            <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
               公開討論会アーカイブ
             </h3>
-            <p className="text-lg text-gray-700 font-medium max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-gray-700 font-medium max-w-2xl mx-auto px-4">
               船橋市長選挙立候補予定者による公開討論会の様子をご覧いただけます
             </p>
           </div>
-          <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
-            <div className="aspect-w-16 aspect-h-9">
+          <div className="bg-white rounded-2xl sm:rounded-3xl shadow-xl overflow-hidden">
+            <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
               <iframe 
                 src="https://www.youtube.com/embed/HnaWNVh26uE" 
                 title="船橋市長選挙立候補予定者 公開討論会"
-                frameBorder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                 allowFullScreen
-                className="w-full h-full"
-                style={{ minHeight: '500px' }}
+                className="absolute top-0 left-0 w-full h-full border-0"
               />
             </div>
-            <div className="p-6 bg-gradient-to-r from-blue-50 to-purple-50">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+            <div className="p-4 sm:p-6 bg-gradient-to-r from-blue-50 to-purple-50">
+              <div className="flex flex-col sm:flex-row items-start gap-3 sm:gap-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" />
                   </svg>
                 </div>
-                <div>
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">討論会について</h4>
-                  <p className="text-gray-700 leading-relaxed">
+                <div className="flex-1">
+                  <h4 className="text-base sm:text-lg font-bold text-gray-900 mb-1 sm:mb-2">討論会について</h4>
+                  <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
                     各候補者が政策や船橋市の未来について語る貴重な機会です。
                     それぞれの考えや人柄を直接知ることができます。
                     投票の参考にぜひご覧ください。
