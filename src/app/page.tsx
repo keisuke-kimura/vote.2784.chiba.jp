@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo, useEffect } from 'react';
-import { MessageCircle, Users, FileSearch, Vote, ArrowRight, MapPin } from 'lucide-react';
+import { MessageCircle, Users, FileSearch, Vote, ArrowRight, MapPin, BarChart3, TrendingUp, Award } from 'lucide-react';
 import Link from 'next/link';
 import PolicyComparison from '@/components/PolicyComparison';
 import EarlyVoting from '@/components/EarlyVoting';
@@ -67,6 +67,7 @@ export default function Home() {
               <a href="#debate" className="text-sm font-semibold text-gray-700 hover:text-blue-600 transition-colors px-3 py-2 rounded-lg hover:bg-blue-50">討論会</a>
               <a href="#features" className="text-sm font-semibold text-gray-700 hover:text-blue-600 transition-colors px-3 py-2 rounded-lg hover:bg-blue-50">機能</a>
               <a href="#candidates" className="text-sm font-semibold text-gray-700 hover:text-blue-600 transition-colors px-3 py-2 rounded-lg hover:bg-blue-50">候補者</a>
+              <Link href="/history" className="text-sm font-semibold text-gray-700 hover:text-blue-600 transition-colors px-3 py-2 rounded-lg hover:bg-blue-50">過去の選挙</Link>
               <button
                 onClick={() => setComparisonOpen(true)}
                 className="text-sm font-semibold bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors cursor-pointer shadow-sm hover:shadow-md"
@@ -245,65 +246,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Speech Schedule Section */}
-      <section id="speeches" className="py-12 sm:py-16 md:py-24 bg-gradient-to-b from-white to-gray-50">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8 sm:mb-12">
-            <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
-              街頭演説スケジュール
-            </h3>
-            <p className="text-base sm:text-lg text-gray-700 font-medium max-w-2xl mx-auto px-4">
-              各候補者の街頭演説予定をご確認いただけます
-            </p>
-          </div>
-          <div className="bg-white rounded-2xl sm:rounded-3xl shadow-xl overflow-hidden p-4 sm:p-6">
-            <SpeechSchedule speeches={speeches} showCandidateName={true} />
-          </div>
-        </div>
-      </section>
-
-      {/* Public Debate Section */}
-      <section id="debate" className="py-12 sm:py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8 sm:mb-12">
-            <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
-              公開討論会アーカイブ
-            </h3>
-            <p className="text-base sm:text-lg text-gray-700 font-medium max-w-2xl mx-auto px-4">
-              船橋市長選挙立候補予定者による公開討論会の様子をご覧いただけます
-            </p>
-          </div>
-          <div className="bg-white rounded-2xl sm:rounded-3xl shadow-xl overflow-hidden">
-            <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
-              <iframe 
-                src="https://www.youtube.com/embed/HnaWNVh26uE" 
-                title="船橋市長選挙立候補予定者 公開討論会"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                allowFullScreen
-                className="absolute top-0 left-0 w-full h-full border-0"
-              />
-            </div>
-            <div className="p-4 sm:p-6 bg-gradient-to-r from-blue-50 to-purple-50">
-              <div className="flex flex-col sm:flex-row items-start gap-3 sm:gap-4">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
-                  <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" />
-                  </svg>
-                </div>
-                <div className="flex-1">
-                  <h4 className="text-base sm:text-lg font-bold text-gray-900 mb-1 sm:mb-2">討論会について</h4>
-                  <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
-                    各候補者が政策や船橋市の未来について語る貴重な機会です。
-                    それぞれの考えや人柄を直接知ることができます。
-                    投票の参考にぜひご覧ください。
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Features Section */}
       <section id="features" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -315,7 +257,7 @@ export default function Home() {
               最新のテクノロジーで、政策比較をシンプルに
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100">
               <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6">
                 <MessageCircle className="w-7 h-7 text-white" />
@@ -343,6 +285,19 @@ export default function Home() {
                 各候補者の経歴、実績、ビジョンを詳しく掲載。投票の判断材料を豊富に提供します。
               </p>
             </div>
+            <Link href="/history" className="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100">
+              <div className="w-14 h-14 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mb-6">
+                <BarChart3 className="w-7 h-7 text-white" />
+              </div>
+              <h4 className="text-xl font-semibold mb-3 text-gray-900">過去の選挙データ</h4>
+              <p className="text-gray-700 leading-relaxed">
+                過去3回の投票率や年代別・地域別の傾向を分析。データで見る船橋市長選挙の歴史。
+              </p>
+              <p className="text-orange-600 font-medium mt-3 group-hover:gap-2 flex items-center gap-1 transition-all">
+                詳しく見る
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </p>
+            </Link>
           </div>
         </div>
       </section>
@@ -447,6 +402,180 @@ export default function Home() {
                 </div>
               </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Speech Schedule Section */}
+      <section id="speeches" className="py-12 sm:py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8 sm:mb-12">
+            <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
+              街頭演説スケジュール
+            </h3>
+            <p className="text-base sm:text-lg text-gray-700 font-medium max-w-2xl mx-auto px-4">
+              各候補者の街頭演説予定をご確認いただけます
+            </p>
+          </div>
+          <div className="bg-white rounded-2xl sm:rounded-3xl shadow-xl overflow-hidden p-4 sm:p-6">
+            <SpeechSchedule speeches={speeches} showCandidateName={true} />
+          </div>
+        </div>
+      </section>
+
+      {/* Public Debate Section */}
+      <section id="debate" className="py-12 sm:py-16 md:py-24 bg-gradient-to-b from-white to-gray-50">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8 sm:mb-12">
+            <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
+              公開討論会アーカイブ
+            </h3>
+            <p className="text-base sm:text-lg text-gray-700 font-medium max-w-2xl mx-auto px-4">
+              船橋市長選挙立候補予定者による公開討論会の様子をご覧いただけます
+            </p>
+          </div>
+          <div className="bg-white rounded-2xl sm:rounded-3xl shadow-xl overflow-hidden">
+            <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+              <iframe 
+                src="https://www.youtube.com/embed/HnaWNVh26uE" 
+                title="船橋市長選挙立候補予定者 公開討論会"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowFullScreen
+                className="absolute top-0 left-0 w-full h-full border-0"
+              />
+            </div>
+            <div className="p-4 sm:p-6 bg-gradient-to-r from-blue-50 to-purple-50">
+              <div className="flex flex-col sm:flex-row items-start gap-3 sm:gap-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" />
+                  </svg>
+                </div>
+                <div className="flex-1">
+                  <h4 className="text-base sm:text-lg font-bold text-gray-900 mb-1 sm:mb-2">討論会について</h4>
+                  <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
+                    各候補者が政策や船橋市の未来について語る貴重な機会です。
+                    それぞれの考えや人柄を直接知ることができます。
+                    投票の参考にぜひご覧ください。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Election History Section */}
+      <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8 sm:mb-12">
+            <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
+              過去の選挙データ
+            </h3>
+            <p className="text-base sm:text-lg text-gray-700 font-medium max-w-2xl mx-auto px-4">
+              船橋市長選挙の投票率推移と傾向を確認できます
+            </p>
+          </div>
+
+          {/* 統計カード */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-2xl border border-blue-200">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-10 h-10 bg-blue-500 rounded-xl flex items-center justify-center">
+                  <BarChart3 className="w-5 h-5 text-white" />
+                </div>
+                <h4 className="font-semibold text-gray-900">平均投票率</h4>
+              </div>
+              <p className="text-3xl font-bold text-blue-700">30.51%</p>
+              <p className="text-sm text-gray-600 mt-1">過去3回の平均</p>
+            </div>
+
+            <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-2xl border border-purple-200">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-10 h-10 bg-purple-500 rounded-xl flex items-center justify-center">
+                  <Users className="w-5 h-5 text-white" />
+                </div>
+                <h4 className="font-semibold text-gray-900">最新有権者数</h4>
+              </div>
+              <p className="text-3xl font-bold text-purple-700">521,228</p>
+              <p className="text-sm text-gray-600 mt-1">2021年時点</p>
+            </div>
+
+            <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-2xl border border-green-200">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-10 h-10 bg-green-500 rounded-xl flex items-center justify-center">
+                  <TrendingUp className="w-5 h-5 text-white" />
+                </div>
+                <h4 className="font-semibold text-gray-900">最高投票率</h4>
+              </div>
+              <p className="text-3xl font-bold text-green-700">34.55%</p>
+              <p className="text-sm text-gray-600 mt-1">2013年選挙</p>
+            </div>
+
+            <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-2xl border border-orange-200">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-10 h-10 bg-orange-500 rounded-xl flex items-center justify-center">
+                  <Award className="w-5 h-5 text-white" />
+                </div>
+                <h4 className="font-semibold text-gray-900">現職当選回数</h4>
+              </div>
+              <p className="text-3xl font-bold text-orange-700">3回</p>
+              <p className="text-sm text-gray-600 mt-1">松戸徹氏</p>
+            </div>
+          </div>
+
+          {/* 投票率推移グラフ */}
+          <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 mb-8">
+            <h4 className="text-lg font-bold text-gray-900 mb-6 flex items-center gap-2">
+              <BarChart3 className="w-5 h-5 text-blue-600" />
+              投票率の推移
+            </h4>
+            <div className="flex items-end justify-center gap-8 h-48">
+              <div className="text-center">
+                <div className="h-40 flex items-end mb-2">
+                  <div 
+                    className="w-20 bg-gradient-to-t from-blue-600 to-blue-400 rounded-t-lg hover:from-blue-700 hover:to-blue-500 transition-colors"
+                    style={{ height: '86.375%' }}
+                  />
+                </div>
+                <p className="font-bold text-gray-900">34.55%</p>
+                <p className="text-sm text-gray-600">2013年</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="h-40 flex items-end mb-2">
+                  <div 
+                    className="w-20 bg-gradient-to-t from-blue-600 to-blue-400 rounded-t-lg hover:from-blue-700 hover:to-blue-500 transition-colors"
+                    style={{ height: '70.25%' }}
+                  />
+                </div>
+                <p className="font-bold text-gray-900">28.1%</p>
+                <p className="text-sm text-gray-600">2017年</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="h-40 flex items-end mb-2">
+                  <div 
+                    className="w-20 bg-gradient-to-t from-blue-600 to-blue-400 rounded-t-lg hover:from-blue-700 hover:to-blue-500 transition-colors"
+                    style={{ height: '72.2%' }}
+                  />
+                </div>
+                <p className="font-bold text-gray-900">28.88%</p>
+                <p className="text-sm text-gray-600">2021年</p>
+              </div>
+            </div>
+          </div>
+
+          {/* 詳細ボタン */}
+          <div className="text-center">
+            <Link
+              href="/history"
+              className="inline-flex items-center gap-2 bg-gradient-to-br from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-xl font-semibold transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+            >
+              <BarChart3 className="w-5 h-5" />
+              詳細データを見る
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
           </div>
         </div>
       </section>
