@@ -117,6 +117,19 @@ export default function PolicyComparison({ onClose }: PolicyComparisonProps) {
           </div>
         </div>
 
+        {/* Notice */}
+        <div className="px-3 sm:px-4 py-3 bg-amber-50 border-b border-amber-200">
+          <div className="flex items-start gap-3 max-w-4xl mx-auto">
+            <svg className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <p className="text-xs sm:text-sm text-amber-800 leading-relaxed">
+              <span className="font-semibold">AIを使用してWeb上の公開情報を収集</span>しています。
+              最新情報は<span className="font-semibold">街頭演説等で候補者ご本人にご確認ください</span>。
+            </p>
+          </div>
+        </div>
+
         {/* Search Bar - Always Visible */}
         <div className="px-3 pb-3 sm:px-4 sm:pb-4">
           <div className="relative">
@@ -241,7 +254,7 @@ export default function PolicyComparison({ onClose }: PolicyComparisonProps) {
                               </div>
                             </div>
                             {comparison!.policies.length === 0 ? (
-                              <p className="text-sm md:text-base text-gray-500 italic text-center py-8 md:py-12 font-medium">この分野の政策なし</p>
+                              <p className="text-sm md:text-base text-gray-500 italic text-center py-8 md:py-12 font-medium">この分野の政策は見つかりませんでした</p>
                             ) : (
                               <div className="space-y-4 md:space-y-5">
                                 {comparison!.policies.map(policy => (

@@ -84,6 +84,23 @@ export default function Home() {
         </div>
       </header>
 
+      {/* Notice Section */}
+      <section className="bg-amber-50 border-b border-amber-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <div className="flex items-start gap-3">
+            <svg className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <div className="text-sm">
+              <p className="text-amber-800 leading-relaxed">
+                このサイトは<span className="font-semibold">AIを使用してWeb上の公開情報を収集・整理</span>して作成されています。
+                最新の正確な情報については、<span className="font-semibold">街頭演説等で候補者ご本人に直接ご確認ください</span>。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 opacity-50" />
