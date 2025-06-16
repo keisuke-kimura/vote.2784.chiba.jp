@@ -32,407 +32,147 @@ export const candidates: Candidate[] = [
       instagram: '@funabashi.shicho'
     },
     policies: [
-      // 教育・子育て - 親子の幸せ応援プロジェクト
+      // 教育・子育て
       {
         id: 'edu-matsudo-1',
         categoryId: 'education',
-        title: '市独自スクールカウンセラー・ソーシャルワーカー・ロイヤー体制強化',
-        description: 'いじめ・不登校支援の専門職配置',
-        details: '市独自のスクールカウンセラー・ソーシャルワーカー・ロイヤー体制を強化し、いじめ・不登校問題に対応。',
+        title: '不登校・いじめ対策強化（専門職配置）',
+        description: 'スクールカウンセラー・ソーシャルワーカー体制強化',
+        details: '市独自のスクールカウンセラー・ソーシャルワーカー・ロイヤー体制強化、校内教育支援センター充実、西部地区サポートルーム新設',
         priority: 'high',
-        tags: ['教育支援', 'カウンセラー', '不登校対策', 'いじめ対策']
+        tags: ['教育支援', '不登校対策', 'いじめ対策']
       },
       {
         id: 'edu-matsudo-2',
         categoryId: 'education',
-        title: '全校で芸術鑑賞教室実施',
-        description: '体験格差解消のための文化教育',
-        details: '全校で芸術鑑賞教室を実施し、子どもたちの体験格差を解消。豊かな感性を育む教育環境を提供。',
+        title: '教育負担軽減・文化教育推進',
+        description: '副教材無償化・芸術鑑賞教室全校実施',
+        details: '副教材無償化による保護者負担軽減、全校での芸術鑑賞教室実施により体験格差解消',
         priority: 'medium',
-        tags: ['芸術教育', '体験格差', '文化振興']
-      },
-      {
-        id: 'edu-matsudo-3',
-        categoryId: 'education',
-        title: '校内教育支援センター充実・西部地区サポートルーム新設',
-        description: '不登校児童生徒への支援拡充',
-        details: '校内教育支援センターを充実させ、西部地区にサポートルームを新設。不登校児童生徒への支援体制を強化。',
-        priority: 'high',
-        tags: ['教育支援', '不登校対策', 'サポートルーム']
-      },
-      {
-        id: 'edu-matsudo-4',
-        categoryId: 'education',
-        title: '副教材無償化',
-        description: '保護者の経済的負担軽減',
-        details: '副教材の無償化により、保護者の経済的負担を軽減し、教育の機会均等を実現。',
-        priority: 'medium',
-        tags: ['無償化', '経済支援', '教育格差']
+        tags: ['無償化', '芸術教育', '教育格差']
       },
       {
         id: 'child-matsudo-1',
         categoryId: 'childcare',
-        title: '市独自児童相談所をR8年開設',
-        description: '児童虐待・育児相談への迅速対応',
-        details: '令和8年に市独自の児童相談所を開設し、児童虐待や育児相談に迅速に対応できる体制を構築。',
+        title: '児童相談所R8年開設・待機児童ゼロ達成',
+        description: '児童虐待対応・保育環境整備',
+        details: '市独自児童相談所を令和8年開設、保育園・放課後ルーム待機児童ゼロ達成、朝7時から登校可能体制で小一の壁解消',
         priority: 'high',
-        tags: ['児童相談所', '子育て支援', '虐待防止']
+        tags: ['児童相談所', '待機児童', '子育て支援']
       },
       {
         id: 'child-matsudo-2',
         categoryId: 'childcare',
-        title: 'ヤングケアラー支援・学習支援・受験料補助',
+        title: 'ヤングケアラー支援・子育て環境充実',
         description: '困難を抱える子どもへの総合支援',
-        details: 'ヤングケアラーへの支援、学習支援、受験料補助など、困難を抱える子どもたちへの総合的な支援を実施。',
+        details: 'ヤングケアラー支援・学習支援・受験料補助、プレーパーク活動支援、幼稚園・保育園運営支援',
         priority: 'high',
-        tags: ['ヤングケアラー', '学習支援', '経済支援']
-      },
-      {
-        id: 'child-matsudo-3',
-        categoryId: 'childcare',
-        title: '朝7時から登校可能体制で小一の壁解消',
-        description: '働く保護者のための早朝受け入れ',
-        details: '朝7時から登校可能な体制を整備し、働く保護者の「小一の壁」問題を解消。',
-        priority: 'high',
-        tags: ['小一の壁', '早朝受け入れ', '子育て支援']
-      },
-      {
-        id: 'child-matsudo-4',
-        categoryId: 'childcare',
-        title: '保育園・放課後ルーム待機児童ゼロ',
-        description: '待機児童問題の完全解決',
-        details: '保育園・放課後ルームの待機児童ゼロを達成し、すべての子どもに保育サービスを提供。',
-        priority: 'high',
-        tags: ['待機児童', '保育園', '放課後ルーム']
-      },
-      {
-        id: 'child-matsudo-5',
-        categoryId: 'childcare',
-        title: 'プレーパーク活動支援',
-        description: '子どもの遊び場づくり',
-        details: 'プレーパーク活動を支援し、子どもたちが自由に遊べる環境を整備。',
-        priority: 'medium',
-        tags: ['プレーパーク', '遊び場', '子育て環境']
-      },
-      {
-        id: 'child-matsudo-6',
-        categoryId: 'childcare',
-        title: '幼稚園・保育園運営支援',
-        description: '就学前教育・保育の質向上',
-        details: '幼稚園・保育園の運営を支援し、就学前教育・保育の質を向上。',
-        priority: 'medium',
-        tags: ['幼稚園', '保育園', '運営支援']
+        tags: ['ヤングケアラー', '学習支援', '子育て環境']
       },
       // 行政改革
       {
         id: 'gov-matsudo-1',
         categoryId: 'governance',
-        title: '24時間オンライン申請・書かない窓口づくり',
-        description: 'デジタル化による利便性向上',
-        details: '24時間オンライン申請システムと書かない窓口づくりにより、市民サービスの利便性を大幅に向上。',
+        title: 'DX推進による市民サービス向上',
+        description: '24時間オンライン申請・書かない窓口',
+        details: '24時間オンライン申請、書かない窓口づくり、DX技術活用による市民サービス向上、業務効率化で接遇日本一',
         priority: 'high',
         tags: ['DX', 'オンライン申請', '行政改革']
       },
-      {
-        id: 'gov-matsudo-2',
-        categoryId: 'governance',
-        title: '業務・事業見直し・効率化で接遇日本一',
-        description: '市民サービスの質向上',
-        details: '業務・事業の見直しと効率化を進め、接遇日本一の市役所を実現。',
-        priority: 'high',
-        tags: ['業務効率化', '接遇', 'サービス向上']
-      },
-      {
-        id: 'gov-matsudo-3',
-        categoryId: 'governance',
-        title: 'DX技術活用で市民サービス向上',
-        description: 'デジタル技術による行政革新',
-        details: 'DX技術を積極的に活用し、市民サービスの質と利便性を向上。',
-        priority: 'high',
-        tags: ['DX', 'デジタル化', '行政革新']
-      },
-      // まちづくり
+      // まちづくり・インフラ
       {
         id: 'infra-matsudo-1',
         categoryId: 'infrastructure',
-        title: '交通ビッグデータ活用で渋滞緩和・道路環境整備',
-        description: 'スマートな交通システム構築',
-        details: '交通ビッグデータを活用して渋滞を緩和し、効率的な道路環境を整備。',
+        title: 'スマート交通システム・安全空間整備',
+        description: '交通ビッグデータ活用・ゾーン30プラス',
+        details: '交通ビッグデータで渋滞緩和、グリーンスローモビリティ拡大・自動運転検討、ゾーン30プラス整備で人優先安全空間',
         priority: 'high',
-        tags: ['ビッグデータ', '渋滞対策', '道路整備']
+        tags: ['スマート交通', '交通安全', '渋滞対策']
       },
       {
         id: 'infra-matsudo-2',
         categoryId: 'infrastructure',
-        title: 'グリーンスローモビリティ拡大・自動運転検討',
-        description: '環境配慮型の新交通システム',
-        details: 'グリーンスローモビリティを拡大し、自動運転技術の導入を検討。環境に優しい交通システムを構築。',
-        priority: 'medium',
-        tags: ['グリーンモビリティ', '自動運転', '環境配慮']
-      },
-      {
-        id: 'infra-matsudo-3',
-        categoryId: 'infrastructure',
-        title: 'ゾーン30プラス整備で人優先安全空間',
-        description: '歩行者優先の安全なまちづくり',
-        details: 'ゾーン30プラスを整備し、人優先の安全な空間を創出。歩行者が安心して暮らせるまちづくり。',
-        priority: 'high',
-        tags: ['交通安全', 'ゾーン30', '歩行者優先']
-      },
-      {
-        id: 'infra-matsudo-4',
-        categoryId: 'infrastructure',
-        title: '海老川上流地区メディカルタウン・東葉高速線新駅着工',
-        description: '医療・健康をテーマとした新たなまちづくり',
-        details: '海老川上流地区で医療・健康をテーマとしたメディカルタウンを開発。東葉高速線新駅の着工により、アクセスを向上。',
+        title: 'メディカルタウン・東葉高速線新駅着工',
+        description: '海老川上流地区の新たなまちづくり',
+        details: '海老川上流地区メディカルタウン開発、東葉高速線新駅着工でアクセス向上、国費300億円で海岸保全施設整備',
         priority: 'high',
         tags: ['メディカルタウン', '新駅', 'まちづくり']
-      },
-      {
-        id: 'infra-matsudo-5',
-        categoryId: 'infrastructure',
-        title: '海岸保全施設に国費300億円確保',
-        description: '津波・高潮対策の大規模整備',
-        details: '海岸保全施設の整備に国費300億円を確保。津波・高潮から市民を守る防災インフラを強化。',
-        priority: 'high',
-        tags: ['防災', '海岸保全', '国費活用']
       },
       // 医療・福祉
       {
         id: 'welfare-matsudo-1',
         categoryId: 'welfare',
-        title: '地域包括ケアシステム充実で健康寿命日本一',
-        description: '高齢者が安心して暮らせる地域づくり',
-        details: '地域包括ケアシステムを充実させ、高齢者が住み慣れた地域で暮らし続けられる環境を整備。健康寿命日本一を目指す。',
+        title: '健康寿命日本一・高齢者支援充実',
+        description: '地域包括ケア・健康ポイント・介護予防',
+        details: '地域包括ケアシステム充実、健康ポイント制度、シルバーリハビリ体操普及、5歳児健診導入、帯状疱疹ワクチン助成',
         priority: 'high',
-        tags: ['地域包括ケア', '健康寿命', '高齢者支援']
+        tags: ['健康寿命', '高齢者支援', '介護予防']
       },
       {
         id: 'welfare-matsudo-2',
         categoryId: 'welfare',
-        title: 'シルバーリハビリ体操普及・元気度チェック',
-        description: '高齢者の健康維持・介護予防',
-        details: 'シルバーリハビリ体操の普及と元気度チェックにより、高齢者の健康維持と介護予防を推進。',
-        priority: 'medium',
-        tags: ['介護予防', 'リハビリ', '健康維持']
+        title: '障害者・医療的ケア児支援強化',
+        description: '雇用促進・包括ケア・短期入所確保',
+        details: '障害者雇用・就労支援強化、精神障害対応包括ケア、医療的ケア児者短期入所確保、若年がん患者在宅療養支援',
+        priority: 'high',
+        tags: ['障害者支援', '医療的ケア', '包括支援']
       },
       {
         id: 'welfare-matsudo-3',
         categoryId: 'welfare',
-        title: '健康ポイント充実で健康寿命日本一',
-        description: '市民の健康づくりインセンティブ',
-        details: '健康ポイント制度を充実させ、市民の健康づくりを促進。健康寿命日本一の実現を目指す。',
-        priority: 'medium',
-        tags: ['健康ポイント', '健康づくり', 'インセンティブ']
-      },
-      {
-        id: 'welfare-matsudo-4',
-        categoryId: 'welfare',
-        title: '障害者雇用・就労支援強化',
-        description: '障害者の社会参加促進',
-        details: '障害者の雇用・就労支援を強化し、誰もが活躍できる共生社会を実現。',
-        priority: 'high',
-        tags: ['障害者支援', '雇用', '就労支援']
-      },
-      {
-        id: 'welfare-matsudo-5',
-        categoryId: 'welfare',
-        title: '精神障害対応包括ケア',
-        description: '精神障害者への総合的支援',
-        details: '精神障害に対応した包括的なケアシステムを構築し、当事者と家族を支援。',
-        priority: 'high',
-        tags: ['精神障害', '包括ケア', '家族支援']
-      },
-      {
-        id: 'welfare-matsudo-6',
-        categoryId: 'welfare',
-        title: '医療的ケア児者短期入所確保',
-        description: '医療的ケアが必要な方への支援',
-        details: '医療的ケア児者の短期入所施設を確保し、家族の負担軽減とレスパイトケアを提供。',
-        priority: 'high',
-        tags: ['医療的ケア', '短期入所', 'レスパイト']
-      },
-      {
-        id: 'welfare-matsudo-7',
-        categoryId: 'welfare',
-        title: '5歳児健診導入',
-        description: '発達障害の早期発見・支援',
-        details: '5歳児健診を導入し、発達障害の早期発見と適切な支援につなげる。',
-        priority: 'high',
-        tags: ['健診', '発達障害', '早期発見']
-      },
-      {
-        id: 'welfare-matsudo-8',
-        categoryId: 'welfare',
-        title: '若年がん患者在宅療養支援',
-        description: '若年がん患者への経済的支援',
-        details: '若年がん患者の在宅療養を支援し、治療と生活の両立をサポート。',
-        priority: 'medium',
-        tags: ['がん支援', '在宅療養', '若年者']
-      },
-      {
-        id: 'welfare-matsudo-9',
-        categoryId: 'welfare',
-        title: '帯状疱疹ワクチン助成継続',
-        description: '高齢者の健康維持支援',
-        details: '帯状疱疹ワクチンへの助成を継続し、高齢者の健康維持を支援。',
-        priority: 'medium',
-        tags: ['ワクチン', '助成', '高齢者']
-      },
-      {
-        id: 'welfare-matsudo-10',
-        categoryId: 'welfare',
-        title: 'LGBT理解促進・多文化共生',
+        title: 'LGBT理解促進・多文化共生推進',
         description: '多様性を尊重する社会づくり',
-        details: 'LGBT理解促進と多文化共生を推進し、誰もが自分らしく生きられる社会を実現。',
+        details: 'LGBT理解促進と多文化共生を推進し、誰もが自分らしく生きられる社会を実現',
         priority: 'medium',
         tags: ['LGBT', '多文化共生', 'ダイバーシティ']
       },
-      // 産業・経済
+      // 産業・経済・文化
       {
         id: 'eco-matsudo-1',
         categoryId: 'economy',
-        title: '農水産物（ニンジン・梨・枝豆・小松菜・海苔・ホンビノス貝等）魅力発信強化',
-        description: '地場産品のブランド化推進',
-        details: '船橋産の農水産物（ニンジン・梨・枝豆・小松菜・海苔・ホンビノス貝等）の魅力を発信し、ブランド価値を向上。',
+        title: '農水産物ブランド化・起業支援',
+        description: '地場産品振興・若手起業家支援',
+        details: '船橋産農水産物（ニンジン・梨・枝豆・小松菜・海苔・ホンビノス貝等）ブランド化、異業種交流会「未来ミーティング」、女性・多世代起業支援',
         priority: 'high',
-        tags: ['農水産物', 'ブランド化', '地産地消']
-      },
-      {
-        id: 'eco-matsudo-2',
-        categoryId: 'economy',
-        title: '異業種交流会「未来ミーティング」で若手ネットワーク形成',
-        description: '若手起業家・経営者の支援',
-        details: '異業種交流会「未来ミーティング」を開催し、若手起業家・経営者のネットワーク形成を支援。',
-        priority: 'medium',
-        tags: ['異業種交流', '若手支援', 'ネットワーク']
-      },
-      {
-        id: 'eco-matsudo-3',
-        categoryId: 'economy',
-        title: '女性・多世代起業支援・企業マッチング',
-        description: '多様な起業・創業支援',
-        details: '女性や多世代の起業を支援し、企業マッチングにより新たなビジネス機会を創出。',
-        priority: 'medium',
-        tags: ['起業支援', '女性活躍', 'マッチング']
+        tags: ['農水産物', 'ブランド化', '起業支援']
       },
       {
         id: 'culture-matsudo-1',
         categoryId: 'culture',
-        title: '音楽のまちプロジェクト',
-        description: '音楽文化による地域活性化',
-        details: '音楽のまちプロジェクトを推進し、音楽文化による地域の活性化と市民の心の豊かさを育む。',
+        title: '音楽・スポーツ・文化振興',
+        description: '音楽のまち・プロスポーツ連携・文化財保護',
+        details: '音楽のまちプロジェクト推進、千葉ジェッツ・クボタスピアーズ連携強化、取掛西貝塚国指定史跡化',
         priority: 'high',
-        tags: ['音楽', '文化振興', 'まちづくり']
+        tags: ['音楽', 'スポーツ振興', '文化財']
       },
-      {
-        id: 'culture-matsudo-2',
-        categoryId: 'culture',
-        title: '千葉ジェッツ・クボタスピアーズ連携強化',
-        description: 'プロスポーツによる地域振興',
-        details: '千葉ジェッツ（バスケットボール）・クボタスピアーズ（ラグビー）との連携を強化し、スポーツによる地域振興を推進。',
-        priority: 'medium',
-        tags: ['プロスポーツ', '地域連携', 'スポーツ振興']
-      },
-      {
-        id: 'culture-matsudo-3',
-        categoryId: 'culture',
-        title: '取掛西貝塚国指定史跡',
-        description: '文化財保護と活用',
-        details: '取掛西貝塚の国指定史跡化を進め、貴重な文化財を保護・活用。',
-        priority: 'medium',
-        tags: ['文化財', '史跡', '歴史']
-      },
-      // 防災
+      // 防災・安全
       {
         id: 'safety-matsudo-1',
         categoryId: 'safety',
-        title: '国費300億円で津波・高潮対策海岸保全施設耐震化',
-        description: '大規模災害への備え',
-        details: '国費300億円を活用し、津波・高潮対策のための海岸保全施設を耐震化。大規模災害から市民を守る。',
+        title: '津波・高潮対策（国費300億円）',
+        description: '海岸保全施設耐震化・避難所電源確保',
+        details: '国費300億円で海岸保全施設耐震化、約100避難所に太陽光・蓄電池設置、全避難所に液体歯磨き・液体ミルク配備',
         priority: 'high',
-        tags: ['津波対策', '高潮対策', '耐震化']
+        tags: ['津波対策', '避難所', '防災']
       },
       {
         id: 'safety-matsudo-2',
         categoryId: 'safety',
-        title: '約100避難所に太陽光・蓄電池設置',
-        description: '災害時の電源確保',
-        details: '約100か所の避難所に太陽光発電と蓄電池を設置し、災害時の電源を確保。',
+        title: '住宅耐震化・防犯対策強化',
+        description: '木造住宅耐震助成・詐欺対策・デジタル防災',
+        details: '木造住宅耐震診断・改修助成拡大、住まい防犯対策補助、電話de詐欺撲滅強化、デジタルハザードマップ、衛星通信システム',
         priority: 'high',
-        tags: ['避難所', '太陽光', '災害対策']
+        tags: ['耐震化', '防犯', 'デジタル防災']
       },
-      {
-        id: 'safety-matsudo-3',
-        categoryId: 'safety',
-        title: '木造住宅耐震診断・改修助成拡大',
-        description: '住宅の耐震化促進',
-        details: '木造住宅の耐震診断・改修への助成を拡大し、地震に強い住宅を増やす。',
-        priority: 'high',
-        tags: ['耐震化', '助成', '住宅']
-      },
-      {
-        id: 'safety-matsudo-4',
-        categoryId: 'safety',
-        title: '全避難所に液体歯磨き・液体ミルク配備',
-        description: '避難生活の質向上',
-        details: '全避難所に液体歯磨きと液体ミルクを配備し、災害時の避難生活の質を向上。',
-        priority: 'medium',
-        tags: ['避難所', '備蓄', '生活支援']
-      },
-      {
-        id: 'safety-matsudo-5',
-        categoryId: 'safety',
-        title: '住まい防犯対策補助・電話de詐欺撲滅強化',
-        description: '日常の安全・安心確保',
-        details: '住まいの防犯対策への補助と電話de詐欺撲滅対策を強化し、市民の日常生活の安全を守る。',
-        priority: 'medium',
-        tags: ['防犯', '詐欺対策', '補助']
-      },
+      // 環境
       {
         id: 'env-matsudo-1',
         categoryId: 'environment',
-        title: 'CO₂実質ゼロ公共施設',
-        description: '脱炭素社会への取り組み',
-        details: '公共施設のCO₂排出を実質ゼロにし、脱炭素社会の実現に向けて率先して取り組む。',
+        title: '脱炭素・環境教育・熱中症対策',
+        description: 'CO₂実質ゼロ・エコカレッジ・クーリングシェルター',
+        details: '公共施設CO₂実質ゼロ、ふなばしエコカレッジによる環境教育、クーリングシェルター確保で熱中症対策',
         priority: 'high',
-        tags: ['脱炭素', 'CO2削減', '環境']
-      },
-      {
-        id: 'env-matsudo-2',
-        categoryId: 'environment',
-        title: 'ふなばしエコカレッジ',
-        description: '環境教育の推進',
-        details: 'ふなばしエコカレッジを通じて、市民の環境意識を高め、持続可能な社会づくりを推進。',
-        priority: 'medium',
-        tags: ['環境教育', 'エコ', '市民啓発']
-      },
-      {
-        id: 'env-matsudo-3',
-        categoryId: 'environment',
-        title: 'クーリングシェルター確保',
-        description: '熱中症対策の拠点整備',
-        details: 'クーリングシェルターを確保し、猛暑日の熱中症対策拠点として市民の健康を守る。',
-        priority: 'high',
-        tags: ['熱中症対策', 'クーリング', '健康']
-      },
-      {
-        id: 'safety-matsudo-6',
-        categoryId: 'safety',
-        title: 'デジタルハザードマップ',
-        description: '災害情報の見える化',
-        details: 'デジタルハザードマップを整備し、災害リスク情報を分かりやすく市民に提供。',
-        priority: 'high',
-        tags: ['ハザードマップ', 'デジタル', '防災情報']
-      },
-      {
-        id: 'safety-matsudo-7',
-        categoryId: 'safety',
-        title: '衛星通信で確実な情報共有体制',
-        description: '災害時の通信確保',
-        details: '衛星通信システムを導入し、災害時でも確実な情報共有体制を構築。',
-        priority: 'high',
-        tags: ['衛星通信', '災害対策', '情報共有']
+        tags: ['脱炭素', '環境教育', '熱中症対策']
       }
     ]
   },
