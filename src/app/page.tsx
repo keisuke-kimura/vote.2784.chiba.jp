@@ -1,11 +1,13 @@
 'use client';
 
 import { useState, useMemo, useEffect } from 'react';
-import { MessageCircle, Users, FileSearch, Vote, ArrowRight, MapPin } from 'lucide-react';
+import { MessageCircle, Users, FileSearch, Vote, ArrowRight, MapPin, Megaphone } from 'lucide-react';
 import Link from 'next/link';
 import PolicyComparison from '@/components/PolicyComparison';
 import EarlyVoting from '@/components/EarlyVoting';
+import SpeechSchedule from '@/components/SpeechSchedule';
 import { candidates as candidatesData } from '@/data/policies';
+import { speeches } from '@/data/speeches';
 
 // Fisher-Yates shuffle algorithm
 const shuffleArray = <T,>(array: T[]): T[] => {
@@ -61,6 +63,7 @@ export default function Home() {
               </div>
             </div>
             <nav className="hidden md:flex items-center gap-6">
+              <a href="#speeches" className="text-sm font-semibold text-gray-700 hover:text-blue-600 transition-colors px-3 py-2 rounded-lg hover:bg-blue-50">街頭演説</a>
               <a href="#debate" className="text-sm font-semibold text-gray-700 hover:text-blue-600 transition-colors px-3 py-2 rounded-lg hover:bg-blue-50">討論会</a>
               <a href="#features" className="text-sm font-semibold text-gray-700 hover:text-blue-600 transition-colors px-3 py-2 rounded-lg hover:bg-blue-50">機能</a>
               <a href="#candidates" className="text-sm font-semibold text-gray-700 hover:text-blue-600 transition-colors px-3 py-2 rounded-lg hover:bg-blue-50">候補者</a>
@@ -221,6 +224,23 @@ export default function Home() {
                 </div>
               </button>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Speech Schedule Section */}
+      <section id="speeches" className="py-12 sm:py-16 md:py-24 bg-gradient-to-b from-white to-gray-50">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8 sm:mb-12">
+            <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
+              街頭演説スケジュール
+            </h3>
+            <p className="text-base sm:text-lg text-gray-700 font-medium max-w-2xl mx-auto px-4">
+              各候補者の街頭演説予定をご確認いただけます
+            </p>
+          </div>
+          <div className="bg-white rounded-2xl sm:rounded-3xl shadow-xl overflow-hidden p-4 sm:p-6">
+            <SpeechSchedule speeches={speeches} showCandidateName={true} />
           </div>
         </div>
       </section>

@@ -2,8 +2,10 @@
 
 import { useRouter } from 'next/navigation';
 import { use } from 'react';
-import { ArrowLeft, Calendar, MapPin, Award, Vote, Target, BookOpen, Twitter, Facebook, Instagram } from 'lucide-react';
+import { ArrowLeft, Calendar, MapPin, Award, Vote, Target, BookOpen, Twitter, Facebook, Instagram, Megaphone } from 'lucide-react';
 import { candidates, policyCategories } from '@/data/policies';
+import { speeches, candidateNameMap } from '@/data/speeches';
+import SpeechSchedule from '@/components/SpeechSchedule';
 import type { PolicyItem } from '@/types/policy';
 
 interface PolicyByCategory {
@@ -221,6 +223,25 @@ export default function CandidateDetailPage({ params }: PageProps) {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Speech Schedule Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center flex items-center justify-center gap-3">
+            <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl flex items-center justify-center">
+              <Megaphone className="w-6 h-6 text-white" />
+            </div>
+            街頭演説予定
+          </h2>
+          <div className="max-w-3xl mx-auto">
+            <SpeechSchedule 
+              speeches={speeches.filter(s => candidateNameMap[s.candidateName] === candidate.id)} 
+              candidateId={candidate.id}
+              showCandidateName={false}
+            />
           </div>
         </div>
       </section>
