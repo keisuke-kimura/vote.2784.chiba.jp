@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { TrendingUp, TrendingDown, Users, Award, BarChart3, PieChart, Calendar, MapPin } from 'lucide-react';
-import { electionHistory, calculateElectionStats, ElectionData } from '@/data/election-history';
+import { electionHistory, calculateElectionStats } from '@/data/election-history';
 
 export default function ElectionHistory() {
   const [selectedElection, setSelectedElection] = useState<number>(0);
