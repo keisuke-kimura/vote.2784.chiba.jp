@@ -10,7 +10,7 @@ interface SpeechScheduleProps {
   showCandidateName?: boolean;
 }
 
-export default function SpeechSchedule({ speeches, candidateId, showCandidateName = true }: SpeechScheduleProps) {
+export default function SpeechSchedule({ speeches, showCandidateName = true }: SpeechScheduleProps) {
   const [showPastSpeeches, setShowPastSpeeches] = useState(false);
   
   // 日付でグループ化
