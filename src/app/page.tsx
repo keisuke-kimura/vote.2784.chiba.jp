@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo, useEffect } from 'react';
-import { MessageCircle, Users, FileSearch, Vote, ArrowRight, MapPin, Megaphone } from 'lucide-react';
+import { MessageCircle, Users, FileSearch, Vote, ArrowRight, MapPin } from 'lucide-react';
 import Link from 'next/link';
 import PolicyComparison from '@/components/PolicyComparison';
 import EarlyVoting from '@/components/EarlyVoting';
