@@ -8,7 +8,7 @@ interface EarlyVotingProps {
   onClose?: () => void;
 }
 
-export default function EarlyVoting({ onClose }: EarlyVotingProps) {
+export default function EarlyVoting({ onClose }: EarlyVotingProps = {}) {
   const [searchQuery, setSearchQuery] = useState('');
 
   const filteredLocations = votingLocations.filter(location => 
@@ -22,31 +22,31 @@ export default function EarlyVoting({ onClose }: EarlyVotingProps) {
   };
 
   return (
-    <div className="min-h-screen bg-white">
-      {/* Header */}
-      <div className="bg-white border-b border-gray-100 sticky top-0 z-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <MapPin className="w-6 h-6 text-white" />
+    <div className="bg-white">
+      {/* Header - Only show when used as modal */}
+      {onClose && (
+        <div className="bg-white border-b border-gray-100 sticky top-0 z-10">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                  <MapPin className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h2 className="text-2xl font-bold text-gray-900">期日前投票所一覧</h2>
+                  <p className="text-sm text-gray-600 font-medium">船橋市長選挙 2025</p>
+                </div>
               </div>
-              <div>
-                <h2 className="text-2xl font-bold text-gray-900">期日前投票所一覧</h2>
-                <p className="text-sm text-gray-600 font-medium">船橋市長選挙 2025</p>
-              </div>
-            </div>
-            {onClose && (
               <button
                 onClick={onClose}
                 className="group p-2 hover:bg-gray-100 rounded-lg transition-colors cursor-pointer"
               >
                 <X className="w-5 h-5 text-gray-500 group-hover:text-gray-700" />
               </button>
-            )}
+            </div>
           </div>
         </div>
-      </div>
+      )}
 
       {/* Search and Info */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">

@@ -74,12 +74,12 @@ export default function Home() {
               >
                 政策比較
               </button>
-              <button
-                onClick={() => setEarlyVotingOpen(true)}
-                className="text-sm font-semibold bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg transition-colors cursor-pointer shadow-sm hover:shadow-md"
+              <Link 
+                href="/early-voting"
+                className="text-sm font-semibold bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg transition-colors shadow-sm hover:shadow-md inline-block"
               >
                 期日前投票
-              </button>
+              </Link>
             </nav>
           </div>
         </div>
@@ -222,9 +222,9 @@ export default function Home() {
               </button>
 
               {/* Early Voting Button */}
-              <button
-                onClick={() => setEarlyVotingOpen(true)}
-                className="group relative bg-white hover:bg-gray-50 text-gray-800 p-6 rounded-2xl transition-all shadow-lg hover:shadow-2xl transform hover:-translate-y-1 cursor-pointer border-2 border-gray-100 overflow-hidden"
+              <Link
+                href="/early-voting"
+                className="group relative bg-white hover:bg-gray-50 text-gray-800 p-6 rounded-2xl transition-all shadow-lg hover:shadow-2xl transform hover:-translate-y-1 block border-2 border-gray-100 overflow-hidden"
               >
                 <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-100 to-pink-100 rounded-full -mr-16 -mt-16 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <div className="relative z-10">
@@ -240,7 +240,7 @@ export default function Home() {
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
-              </button>
+              </Link>
             </div>
           </div>
         </div>
