@@ -188,12 +188,30 @@ export const speeches: Speech[] = [
     candidateName: 'まつど徹',
     party: '無所属（現職・4選目指す）',
     date: '2025-06-20',
+    location: '三山 ヤオコー前',
+    time: '11:00',
+    source: 'https://tohrumatsudo.jp/speech/'
+  },
+  {
+    id: 'matsudo-22',
+    candidateName: 'まつど徹',
+    party: '無所属（現職・4選目指す）',
+    date: '2025-06-20',
+    location: '薬円台駅前',
+    time: '13:30',
+    source: 'https://tohrumatsudo.jp/speech/'
+  },
+  {
+    id: 'matsudo-23',
+    candidateName: 'まつど徹',
+    party: '無所属（現職・4選目指す）',
+    date: '2025-06-20',
     location: '下総中山駅 北口',
     time: '18:00',
     source: 'https://tohrumatsudo.jp/speech/'
   },
   {
-    id: 'matsudo-22',
+    id: 'matsudo-24',
     candidateName: 'まつど徹',
     party: '無所属（現職・4選目指す）',
     date: '2025-06-21',
@@ -202,7 +220,7 @@ export const speeches: Speech[] = [
     source: 'https://tohrumatsudo.jp/speech/'
   },
   {
-    id: 'matsudo-23',
+    id: 'matsudo-25',
     candidateName: 'まつど徹',
     party: '無所属（現職・4選目指す）',
     date: '2025-06-21',
@@ -211,7 +229,7 @@ export const speeches: Speech[] = [
     source: 'https://tohrumatsudo.jp/speech/'
   },
   {
-    id: 'matsudo-24',
+    id: 'matsudo-26',
     candidateName: 'まつど徹',
     party: '無所属（現職・4選目指す）',
     date: '2025-06-21',
@@ -220,7 +238,7 @@ export const speeches: Speech[] = [
     source: 'https://tohrumatsudo.jp/speech/'
   },
   {
-    id: 'matsudo-25',
+    id: 'matsudo-27',
     candidateName: 'まつど徹',
     party: '無所属（現職・4選目指す）',
     date: '2025-06-21',
@@ -229,7 +247,7 @@ export const speeches: Speech[] = [
     source: 'https://tohrumatsudo.jp/speech/'
   },
   {
-    id: 'matsudo-26',
+    id: 'matsudo-28',
     candidateName: 'まつど徹',
     party: '無所属（現職・4選目指す）',
     date: '2025-06-21',
@@ -238,7 +256,16 @@ export const speeches: Speech[] = [
     source: 'https://tohrumatsudo.jp/speech/'
   },
   {
-    id: 'matsudo-27',
+    id: 'matsudo-29',
+    candidateName: 'まつど徹',
+    party: '無所属（現職・4選目指す）',
+    date: '2025-06-21',
+    location: '船橋駅 南口',
+    time: '18:30',
+    source: 'https://tohrumatsudo.jp/speech/'
+  },
+  {
+    id: 'matsudo-30',
     candidateName: 'まつど徹',
     party: '無所属（現職・4選目指す）',
     date: '2025-06-21',
@@ -344,6 +371,116 @@ export const speeches: Speech[] = [
     time: '08:00',
     source: 'https://x.com/tsumagari1977'
   },
+  {
+    id: 'tsumagari-11',
+    candidateName: 'つまがり俊明',
+    party: '無所属新人（立憲民主党系）',
+    date: '2025-06-20',
+    location: '朝駅頭 飯山満駅',
+    time: '朝',
+    remarks: '野田佳彦衆議院議員応援',
+    source: 'https://www.facebook.com/team.tsumagari'
+  },
+  {
+    id: 'tsumagari-12',
+    candidateName: 'つまがり俊明',
+    party: '無所属新人（立憲民主党系）',
+    date: '2025-06-20',
+    location: '津田沼駅北口',
+    time: '16:30',
+    remarks: '夜駅頭',
+    source: 'https://www.facebook.com/team.tsumagari'
+  },
+  {
+    id: 'tsumagari-13',
+    candidateName: 'つまがり俊明',
+    party: '無所属新人（立憲民主党系）',
+    date: '2025-06-21',
+    location: 'JR船橋駅北口',
+    time: '09:40',
+    source: 'https://www.tsumagari.info'
+  },
+  {
+    id: 'tsumagari-14',
+    candidateName: 'つまがり俊明',
+    party: '無所属新人（立憲民主党系）',
+    date: '2025-06-21',
+    location: '新船橋駅',
+    time: '10:30',
+    source: 'https://www.tsumagari.info'
+  },
+  {
+    id: 'tsumagari-15',
+    candidateName: 'つまがり俊明',
+    party: '無所属新人（立憲民主党系）',
+    date: '2025-06-21',
+    location: '西船橋駅北口',
+    time: '11:30',
+    source: 'https://www.tsumagari.info'
+  },
+  {
+    id: 'tsumagari-16',
+    candidateName: 'つまがり俊明',
+    party: '無所属新人（立憲民主党系）',
+    date: '2025-06-21',
+    location: 'JR下総中山駅',
+    time: '12:20',
+    source: 'https://www.tsumagari.info'
+  },
+  {
+    id: 'tsumagari-17',
+    candidateName: 'つまがり俊明',
+    party: '無所属新人（立憲民主党系）',
+    date: '2025-06-21',
+    location: '馬込沢駅',
+    time: '13:40',
+    source: 'https://www.tsumagari.info'
+  },
+  {
+    id: 'tsumagari-18',
+    candidateName: 'つまがり俊明',
+    party: '無所属新人（立憲民主党系）',
+    date: '2025-06-21',
+    location: '高根公団駅',
+    time: '16:00',
+    source: 'https://www.tsumagari.info'
+  },
+  {
+    id: 'tsumagari-19',
+    candidateName: 'つまがり俊明',
+    party: '無所属新人（立憲民主党系）',
+    date: '2025-06-21',
+    location: '高根木戸駅',
+    time: '16:40',
+    source: 'https://www.tsumagari.info'
+  },
+  {
+    id: 'tsumagari-20',
+    candidateName: 'つまがり俊明',
+    party: '無所属新人（立憲民主党系）',
+    date: '2025-06-21',
+    location: 'JUJUきたなら',
+    time: '17:20',
+    source: 'https://www.tsumagari.info'
+  },
+  {
+    id: 'tsumagari-21',
+    candidateName: 'つまがり俊明',
+    party: '無所属新人（立憲民主党系）',
+    date: '2025-06-21',
+    location: 'JR津田沼駅北口',
+    time: '18:30',
+    source: 'https://www.tsumagari.info'
+  },
+  {
+    id: 'tsumagari-22',
+    candidateName: 'つまがり俊明',
+    party: '無所属新人（立憲民主党系）',
+    date: '2025-06-21',
+    location: '新津田沼駅',
+    time: '19:30',
+    source: 'https://www.tsumagari.info'
+  },
 
   // 江川 あつこ
   {
@@ -354,6 +491,16 @@ export const speeches: Speech[] = [
     location: '船橋駅北口',
     time: '告示日',
     remarks: '街宣第一声',
+    source: 'https://x.com/egawa_funabashi'
+  },
+  {
+    id: 'egawa-2',
+    candidateName: '江川 あつこ',
+    party: '無所属新人（ふなばし未来会議代表）',
+    date: '2025-06-20',
+    location: 'JR船橋駅',
+    time: '',
+    remarks: '連日実施',
     source: 'https://x.com/egawa_funabashi'
   },
 
