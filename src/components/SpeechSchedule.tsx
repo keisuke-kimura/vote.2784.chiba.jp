@@ -26,8 +26,9 @@ export default function SpeechSchedule({ speeches, showCandidateName = true }: S
   // 日付順にソート
   const sortedDates = Object.keys(groupedSpeeches).sort();
   
-  // 今日の日付を取得
-  const today = new Date().toISOString().split('T')[0];
+  // 日本時間で今日の日付を取得
+  const japanTime = new Date(new Date().toLocaleString("en-US", {timeZone: "Asia/Tokyo"}));
+  const today = japanTime.toISOString().split('T')[0];
   
   // 日付を分類
   const pastDates = sortedDates.filter(date => date < today);
